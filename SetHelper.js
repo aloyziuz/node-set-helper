@@ -12,11 +12,16 @@ module.exports = {
      * perform set intersection. will return common elements of the 2 array
      * @param {array} a 
      * @param {array} b 
+     * @param {Function} transformFn
      */
-    SetIntersection: function(a, b){
-        var intermediate = new Set(b);
-        return new Set(a.filter(function(x){
-            return intermediate.has(x);
+    SetIntersection: function(a, b, transformFn){
+        var setOfB = new Set(b);
+        return new Set(a.filter(function(memberOfA){
+            let compareValue = memberOfA;
+            if(transformFn){
+                compareValue = transformFn(memberOfA);
+            }
+            return setOfB.has(compareValue);
         }));
     }, 
 
@@ -24,11 +29,16 @@ module.exports = {
      * perform set difference. will return elements in a that does not exist in b
      * @param {array} a 
      * @param {array} b 
+     * @param {Function} transformFn
      */
-    SetDifference: function(a, b){
-        var intermediate = new Set(b);
-        return new Set(a.filter(function(x){
-            return !intermediate.has(x);
+    SetDifference: function(a, b, transformFn){
+        var setOfB = new Set(b);
+        return new Set(a.filter(function(memberOfA){
+            let compareValue = memberOfA;
+            if(transformFn){
+                compareValue = transformFn(memberOfA);
+            }
+            return !setOfB.has(memberOfA);
         }));
     }
 }
