@@ -1,6 +1,6 @@
 {
 	"name": "@aloysius-software-factory/set-helper",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "",
 	"main": "SetHelper.js",
 	"types": "index.d.ts",
