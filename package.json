@@ -9,5 +9,14 @@
 	},
 	"keywords": [],
 	"author": "Aloysius",
-	"license": "ISC"
+	"license": "ISC", 
+	"readme": "README.md", 
+	"homepage": "https://github.com/aloyziuz/node-set-helper", 
+	"repository": {
+		"type": "git", 
+		"url": "https://github.com/aloyziuz/node-set-helper"
+	}, 
+	"bugs": {
+		"url": "https://github.com/aloyziuz/node-set-helper/issues"
+	}
 }
