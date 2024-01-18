@@ -1,11 +1,12 @@
 {
 	"name": "@aloysius-software-factory/set-helper",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "",
 	"main": "SetHelper.js",
 	"types": "index.d.ts",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"publish": "npm publish --access public"
 	},
 	"keywords": [],
 	"author": "Aloysius",
@@ -14,7 +15,7 @@
 	"homepage": "https://github.com/aloyziuz/node-set-helper",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/aloyziuz/node-set-helper"
+		"url": "git+https://github.com/aloyziuz/node-set-helper.git"
 	},
 	"bugs": {
 		"url": "https://github.com/aloyziuz/node-set-helper/issues"

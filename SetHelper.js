@@ -3,7 +3,7 @@
      * @param {array} a 
      * @param {array} b 
      */
-export function SetUnion(a, b){
+function SetUnion(a, b){
     return new Set(a.concat(b));
 }
 
@@ -13,7 +13,7 @@ export function SetUnion(a, b){
  * @param {array} b 
  * @param {Function} transformFn
  */
-export function SetIntersection(a, b, transformFn){
+function SetIntersection(a, b, transformFn){
     var setOfB = new Set(b);
     return new Set(a.filter(function(memberOfA){
         let compareValue = memberOfA;
@@ -30,7 +30,7 @@ export function SetIntersection(a, b, transformFn){
  * @param {array} b 
  * @param {Function} transformFn
  */
-export function SetDifference(a, b, transformFn){
+function SetDifference(a, b, transformFn){
     var setOfB = new Set(b);
     return new Set(a.filter(function(memberOfA){
         let compareValue = memberOfA;
@@ -39,4 +39,8 @@ export function SetDifference(a, b, transformFn){
         }
         return !setOfB.has(memberOfA);
     }));
+}
+
+module.exports = {
+    SetUnion, SetDifference, SetIntersection
 }
